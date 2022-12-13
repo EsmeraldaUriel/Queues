@@ -47,6 +47,7 @@ class IterableMixin:
         while len(self) > 0:
             yield self.dequeue()
 
+
 class Queue(IterableMixin):
     def __init__(self, *elements):
         self._elements = deque(elements)
@@ -57,4 +58,15 @@ class Queue(IterableMixin):
     def dequeue(self):
         return self._elements.popleft()
 
+
 class PriorityQueue(IterableMixin):
+    def __init__(self):
+        self._elements = []
+        self._counter = count()
+
+    def enqueue_with_priority(self, priority, value):
+        element = (-priority, next(self._counter), value)
+        heappush(self._elements, element)
+
+    def dequeue(self):
+        return heappop(self._elements)[-1]

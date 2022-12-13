@@ -1,5 +1,5 @@
 import argparse
-from queue import LifoQueue, PriorityQueue, Queue
+from queues import Stack, PriorityQueue, Queue
 import threading
 from random import randint
 from time import sleep
@@ -7,7 +7,7 @@ from time import sleep
 
 QUEUE_TYPES = {
     "fifo": Queue,
-    "lifo": LifoQueue,
+    "lifo": Stack,
     "heap": PriorityQueue
 }
 

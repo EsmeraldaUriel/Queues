@@ -87,3 +87,9 @@ class Producer(Worker):
         super().__init__(speed, buffer)
         self.products = products
 
+    def run(self):
+        while True:
+            self.product = choice(self.products)
+            self.simulate_work()
+            self.buffer.put(self.product)
+            self.simulate_idle()

@@ -26,19 +26,6 @@ class Stack(Queue):
         return self._elements.pop()
 
 
-class PriorityQueue:
-    def __init__(self):
-        self._elements = []
-        self._counter = count()
-
-    def enqueue_with_priority(self, priority, value):
-        element = (-priority, next(self._counter), value)
-        heappush(self._elements, element)
-
-    def dequeue(self):
-        return heappop(self._elements)[-1]
-
-
 class IterableMixin:
     def __len__(self):
         return len(self._elements)

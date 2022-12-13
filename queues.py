@@ -25,4 +25,5 @@ class Stack(Queue):
         return self._elements.pop()
 
 class PriorityQueue:
-
+    def __init__(self):
+        self._elements = []

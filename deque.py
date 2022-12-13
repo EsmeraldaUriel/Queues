@@ -1,9 +1,11 @@
 from queues import Queue
 
-fifo = Queue("1st", "2nd", "3rd")
-len(fifo)
+fifo = Queue()
+fifo.enqueue("1st")
+fifo.enqueue("2nd")
+fifo.enqueue("3rd")
 
-for element in fifo:
-    print(element)
+fifo.dequeue()
+fifo.dequeue()
+fifo.dequeue()
 
-len(fifo)

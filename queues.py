@@ -1,11 +1,11 @@
 from collections import deque
 
 class Queue:
-    def __int__(self, *elements):
+    def __init__(self, *elements):
         self._elements = deque(elements)
 
     def __len__(self):
-        return  len(self._elements)
+        return len(self._elements)
 
     def __iter__(self):
         while len(self) > 0:

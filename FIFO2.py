@@ -1,4 +1,4 @@
-from queues import Queue
+from queues1 import Queue
 
 fifo = Queue()
 fifo.enqueue("1st")

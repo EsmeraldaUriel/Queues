@@ -8,4 +8,5 @@ heappush(fruits, "banana")
 
 heappop(fruits)
 
-print(fruits)
+print("The basket now Contains: ", fruits)
+# As you can see the apple is removed and the remaining fruits is shuffled

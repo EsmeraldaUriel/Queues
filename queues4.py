@@ -29,3 +29,5 @@ class PriorityQueue:
     def __init__(self):
         self._elements = []
 
+    def enqueue_with_priority(self, priority, value):
+        heappush(self._elements, (priority, value))

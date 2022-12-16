@@ -17,3 +17,8 @@ class Queue:
 
     def enqueue(self, element):
         self._elements.append(element)
+
+
+class Stack(Queue):
+    def dequeue(self):
+        return self._elements.pop()

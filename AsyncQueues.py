@@ -8,6 +8,8 @@ from typing import NamedTuple
 
 import aiohttp
 
+from async_queues import parse_args
+
 
 class Job(NamedTuple):
     url: str
